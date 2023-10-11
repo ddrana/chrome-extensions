@@ -18,9 +18,9 @@ findURL = function changeURL(text) {
 }
 
 //BLOCK THE ENTIRE DOMAIN WITH THE FOLLOWING FUNCTION
-findAllURL = function changeAllURL(text) {
+findAllURL = function changeAllURL(url) {
     var current = window.location.href;
-    if (current.startsWith(text)) {
+    if (current.startsWith(url)) {
         document.documentElement.innerHTML = '';
         document.documentElement.innerHTML = 'Domain is blocked';
         document.documentElement.scrollTop = 0;
@@ -28,5 +28,7 @@ findAllURL = function changeAllURL(text) {
 }
 
 
-findURL("https://www.quora.com/");
+findAllURL("https://www.quora.com/");
 findAllURL("https://www.facebook.com/");
+findAllURL("https://kite.zerodha.com");
+findAllURL("https://www.rediff.com/");
